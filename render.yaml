@@ -14,7 +14,7 @@ services:
           property: connectionString
       - key: REDIS_URL
         fromService:
-          type: redis
+          type: keyvalue
           name: samadhan-redis
           property: connectionString
       - key: GEMINI_API_KEY
@@ -32,7 +32,7 @@ services:
       - key: S3_BUCKET_NAME
         value: samadhan-setu-media
 
-  # 2. Celery Background Worker Service (Requires Render Starter Plan - $7/mo)
+  # 2. Celery Background Worker Service
   - type: worker
     name: samadhan-setu-worker
     runtime: python
@@ -48,21 +48,21 @@ services:
           property: connectionString
       - key: REDIS_URL
         fromService:
-          type: redis
+          type: keyvalue
           name: samadhan-redis
           property: connectionString
       - key: GEMINI_API_KEY
         sync: false
 
-# Managed Databases & Caches
+  # 3. Managed Key-Value / Redis Service
+  - type: keyvalue
+    name: samadhan-redis
+    plan: free
+    ipAllowList: []
+
+# Managed Databases
 databases:
   - name: samadhan-postgres
     databaseName: samadhan_setu
     user: samadhan_user
     plan: free
-
-# Managed Redis
-redis:
-  - name: samadhan-redis
-    plan: free
-    ipAllowList: []
