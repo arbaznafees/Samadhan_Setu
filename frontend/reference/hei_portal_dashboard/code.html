@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Samadhan Setu - HEI Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-container": "#002147",
+                      "on-primary-container": "#708ab5",
+                      "on-secondary": "#ffffff",
+                      "on-surface": "#1a1b1e",
+                      "on-surface-variant": "#44474e",
+                      "on-tertiary-fixed": "#191c1d",
+                      "tertiary": "#090b0c",
+                      "surface-container-highest": "#e3e2e6",
+                      "outline-variant": "#c4c6cf",
+                      "primary": "#000a1e",
+                      "on-secondary-fixed": "#241a00",
+                      "surface-container-low": "#f4f3f7",
+                      "on-tertiary-fixed-variant": "#454748",
+                      "on-background": "#1a1b1e",
+                      "on-secondary-container": "#745c00",
+                      "inverse-surface": "#2f3033",
+                      "primary-fixed-dim": "#aec7f6",
+                      "inverse-primary": "#aec7f6",
+                      "secondary-fixed-dim": "#e9c349",
+                      "surface-tint": "#465f88",
+                      "surface-variant": "#e3e2e6",
+                      "error-container": "#ffdad6",
+                      "background": "#faf9fd",
+                      "on-primary": "#ffffff",
+                      "surface": "#faf9fd",
+                      "secondary": "#735c00",
+                      "secondary-fixed": "#ffe088",
+                      "on-primary-fixed": "#001b3d",
+                      "inverse-on-surface": "#f1f0f4",
+                      "on-secondary-fixed-variant": "#574500",
+                      "on-tertiary-container": "#87898a",
+                      "surface-bright": "#faf9fd",
+                      "outline": "#74777f",
+                      "surface-container-high": "#e9e7eb",
+                      "on-error": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-container": "#fed65b",
+                      "on-error-container": "#93000a",
+                      "on-tertiary": "#ffffff",
+                      "surface-container": "#efedf1",
+                      "tertiary-fixed-dim": "#c5c7c8",
+                      "tertiary-fixed": "#e1e3e4",
+                      "on-primary-fixed-variant": "#2d476f",
+                      "primary-fixed": "#d6e3ff",
+                      "error": "#ba1a1a",
+                      "surface-dim": "#dad9dd",
+                      "tertiary-container": "#1f2223"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "1rem",
+                      "margin-desktop": "2.5rem",
+                      "gutter": "1.5rem",
+                      "container-max": "1280px",
+                      "stack-sm": "0.5rem",
+                      "stack-lg": "2rem",
+                      "stack-md": "1rem"
+              },
+              "fontFamily": {
+                      "headline-xl": [
+                              "Poppins"
+                      ],
+                      "headline-lg": [
+                              "Poppins"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Poppins"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Poppins"
+                      ]
+              },
+              "fontSize": {
+                      "headline-xl": [
+                              "40px",
+                              {
+                                      "lineHeight": "52px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "14px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased overflow-hidden flex h-screen">
+<!-- SideNavBar (Shared Component) -->
+<nav class="bg-surface-container-lowest dark:bg-tertiary-container fixed left-0 top-0 h-screen w-[280px] bg-surface-container-lowest dark:bg-tertiary-container border-r border-outline-variant dark:border-outline flat no shadows flex flex-col h-full p-4 gap-stack-md z-50">
+<!-- Header -->
+<div class="flex items-center gap-4 mb-6 mt-2">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container-high flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A detailed digital illustration of a government seal or emblem in a modern, flat design style. The emblem features subtle geometric patterns in deep navy blue and pale gray tones, communicating authority and stability. The overall look is clean, corporate, and suitable for a digital governance portal header." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJF_fJyQa_C6oVJl0HIkKOXod_R5jydu3hH5Ucu4_H7X-nqRgwPLtEqBUU6s7agW-1A2GMRLet3J1-UuizFnOIrAraRAfjfMa51XM7GnXzUxeIeeKMK6RgUeiIIf5qImwVinyM2BWYRtQQQMraHnvNXPHuniLOrbVq2-yDIZ1Fxmrgi5fm1E8bSwfLeKQsYWTvMzbwWYpEXQfyDz_5EOpmYt9jsgSpuP5bodTowxSZ7yCBJhMJTxPF"/>
+</div>
+<div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim truncate">Samadhan Setu</h1>
+<p class="font-label-md text-label-md text-on-surface-variant dark:text-on-tertiary-container truncate">Governance Portal</p>
+</div>
+</div>
+<!-- Navigation Links -->
+<div class="flex-grow flex flex-col gap-1 overflow-y-auto pr-2">
+<!-- Dashboard (Active) -->
+<a class="flex items-center gap-3 px-4 py-3 bg-primary-container dark:bg-primary text-on-primary-container dark:text-on-primary rounded-lg font-bold transition-transform scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<!-- Grievances -->
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-low dark:hover:bg-surface-container-high hover:bg-surface-container-high dark:hover:bg-surface-variant transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="report_problem">report_problem</span>
+<span class="font-label-md text-label-md">Grievances</span>
+</a>
+<!-- Analytics -->
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-low dark:hover:bg-surface-container-high hover:bg-surface-container-high dark:hover:bg-surface-variant transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-label-md text-label-md">Analytics</span>
+</a>
+<!-- Stakeholders -->
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-low dark:hover:bg-surface-container-high hover:bg-surface-container-high dark:hover:bg-surface-variant transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="font-label-md text-label-md">Stakeholders</span>
+</a>
+<!-- Funding -->
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-low dark:hover:bg-surface-container-high hover:bg-surface-container-high dark:hover:bg-surface-variant transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-label-md text-label-md">Funding</span>
+</a>
+<!-- Settings -->
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-low dark:hover:bg-surface-container-high hover:bg-surface-container-high dark:hover:bg-surface-variant transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+</div>
+<!-- CTA & Footer -->
+<div class="mt-auto flex flex-col gap-4">
+<button class="w-full bg-primary-container text-on-primary-container px-4 py-2 rounded-lg font-label-md text-label-md hover:opacity-90 transition-opacity">
+                Export Reports
+            </button>
+<div class="border-t border-outline-variant dark:border-outline pt-4 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-label-md text-label-md">Help Center</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-label-md text-label-md">Logout</span>
+</a>
+</div>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="ml-[280px] flex-1 h-screen overflow-y-auto bg-surface p-gutter">
+<!-- Dashboard Header -->
+<header class="flex justify-between items-end mb-stack-lg border-b border-outline-variant pb-4">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary">University Portal</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-1">Manage assigned challenges and research proposals.</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<div class="flex items-center gap-2 pl-4 border-l border-outline-variant">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">
+                        RK
+                    </div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Dr. Rajiv Kumar</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Dean of Research</p>
+</div>
+</div>
+</div>
+</header>
+<div class="grid grid-cols-12 gap-gutter max-w-container-max mx-auto">
+<!-- Summary Cards (Bento Style) -->
+<div class="col-span-12 md:col-span-4 flex flex-col gap-gutter">
+<!-- Active Projects Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-[0_8px_24px_rgba(0,33,71,0.04)] relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container/5 to-transparent pointer-events-none"></div>
+<div class="flex justify-between items-start mb-4 relative z-10">
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Active Projects</p>
+<h3 class="font-headline-xl text-headline-xl text-primary mt-1">24</h3>
+</div>
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="science">science</span>
+</div>
+</div>
+<div class="flex items-center gap-2 relative z-10">
+<span class="material-symbols-outlined text-secondary font-bold text-sm" data-icon="trending_up">trending_up</span>
+<span class="font-body-sm text-body-sm text-secondary font-medium">+3 this month</span>
+</div>
+</div>
+<!-- New Proposals Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-[0_8px_24px_rgba(0,33,71,0.04)] relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-32 h-32 bg-secondary-container/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex justify-between items-start mb-4 relative z-10">
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">New Proposals</p>
+<h3 class="font-headline-xl text-headline-xl text-primary mt-1">12</h3>
+</div>
+<div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="note_add">note_add</span>
+</div>
+</div>
+<div class="flex items-center gap-2 relative z-10">
+<span class="font-body-sm text-body-sm text-on-surface-variant">4 awaiting review</span>
+</div>
+</div>
+<!-- Quick Action Card -->
+<div class="bg-primary text-on-primary rounded-xl p-6 shadow-lg relative overflow-hidden flex flex-col justify-between min-h-[160px]">
+<div class="relative z-10">
+<h4 class="font-headline-md text-headline-md mb-2">Submit New Proposal</h4>
+<p class="font-body-sm text-body-sm opacity-80 mb-4">Initiate research for state-level challenges.</p>
+</div>
+<button class="relative z-10 w-fit bg-secondary text-on-secondary px-6 py-2 rounded-full font-label-md text-label-md hover:bg-secondary/90 transition-colors flex items-center gap-2">
+                        Start <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Main Queue (Assigned Challenges) -->
+<div class="col-span-12 md:col-span-8">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl shadow-[0_8px_24px_rgba(0,33,71,0.04)] flex flex-col h-full min-h-[600px]">
+<!-- Table Header / Filters -->
+<div class="p-6 border-b border-outline-variant flex justify-between items-center bg-surface-container-low rounded-t-xl">
+<h3 class="font-headline-md text-headline-md text-primary">Assigned Challenges</h3>
+<div class="flex gap-3">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm" data-icon="filter_list">filter_list</span>
+<select class="pl-9 pr-8 py-2 rounded-lg border-outline-variant bg-surface-container-lowest font-body-sm text-body-sm text-on-surface focus:border-primary focus:ring-1 focus:ring-primary appearance-none cursor-pointer hover:bg-surface-container-highest transition-colors">
+<option value="all">All Domains</option>
+<option value="agri">Agriculture</option>
+<option value="tech">Technology</option>
+<option value="infra">Infrastructure</option>
+</select>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm" data-icon="sort">sort</span>
+<select class="pl-9 pr-8 py-2 rounded-lg border-outline-variant bg-surface-container-lowest font-body-sm text-body-sm text-on-surface focus:border-primary focus:ring-1 focus:ring-primary appearance-none cursor-pointer hover:bg-surface-container-highest transition-colors">
+<option value="recent">Status: All</option>
+<option value="pending">Pending</option>
+<option value="active">Active</option>
+<option value="review">In Review</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Table List -->
+<div class="flex-1 overflow-auto">
+<ul class="divide-y divide-outline-variant">
+<!-- Item 1 -->
+<li class="p-6 hover:bg-surface-container-low transition-colors group cursor-pointer">
+<div class="flex justify-between items-start gap-4">
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-2">
+<span class="px-2.5 py-1 rounded-full bg-surface-variant text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">CHL-2023-041</span>
+<span class="px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Action Required
+                                            </span>
+</div>
+<h4 class="font-headline-sm text-headline-md text-primary group-hover:text-primary-container transition-colors line-clamp-1">Water Conservation Strategies in Arid Regions</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Develop a scalable framework for rainwater harvesting and aquifer recharge specifically tailored for drought-prone districts of Jharkhand.</p>
+</div>
+<div class="flex flex-col items-end gap-3 shrink-0">
+<p class="font-body-sm text-body-sm text-on-surface-variant">Due: <span class="font-medium text-on-surface">Oct 24, 2023</span></p>
+<div class="flex -space-x-2">
+<img class="w-8 h-8 rounded-full border-2 border-surface-container-lowest object-cover z-20" data-alt="A small, circular profile picture of an academic researcher with a professional demeanor, set against a neutral gray background. The image is clean and well-lit." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgDbyV-V7vthMCwrDUaj557DIaGTY3N9gMKcX-J00R91P8lpHYqD-Na5h5AOLDFo18ApRNpmnZnd-b8azDi2lVk0TOXGfhCgzgLDnNnCtKjpyBTIxozWQCGLKlqa0gGMyYPpzq3bBrZUpFmu3AkhpkNs0k7jg1AtTH-dN1SpBjszwJSIFZR8VGFfb5JMdiy-GnAGqLy2jDmigBhFyme67KSqJq8Lx7jKql5k0m8zH1PSIF31ojob7J"/>
+<img class="w-8 h-8 rounded-full border-2 border-surface-container-lowest object-cover z-10" data-alt="A small, circular profile picture of an academic researcher with a professional demeanor, set against a neutral gray background. The image is clean and well-lit." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIosr5166H2DoBzEdQnn0MMd-zuUjoJJPk5nGuGSIfJYaIWZu94z6gRxfTHj4C0Sr8mj0wWzsul2z-llm63M_qXhyLtujvks3uHfh9VlUdtZ5_CT-P102Ima74pYvGCHDRzfcS1k8CdlxBIFz1oLDFNpruRtO_pj2Mf_50mRUDXb8rt5hpWV65VyfOa05b_vcRJZZnZwq4_f71y4np-xyjh7GaxDAhJMaDewDONPA80IUhKpVtSo7q"/>
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-lowest bg-surface-variant text-on-surface-variant flex items-center justify-center font-label-sm text-[10px] z-0">+2</div>
+</div>
+</div>
+</div>
+</li>
+<!-- Item 2 -->
+<li class="p-6 hover:bg-surface-container-low transition-colors group cursor-pointer">
+<div class="flex justify-between items-start gap-4">
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-2">
+<span class="px-2.5 py-1 rounded-full bg-surface-variant text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">CHL-2023-088</span>
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> In Progress
+                                            </span>
+</div>
+<h4 class="font-headline-sm text-headline-md text-primary group-hover:text-primary-container transition-colors line-clamp-1">Smart Grid Implementation Pilot</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Design a pilot study for a localized smart energy grid integrating solar power for rural health centers.</p>
+</div>
+<div class="flex flex-col items-end gap-3 shrink-0">
+<p class="font-body-sm text-body-sm text-on-surface-variant">Due: <span class="font-medium text-on-surface">Nov 12, 2023</span></p>
+<div class="flex -space-x-2">
+<img class="w-8 h-8 rounded-full border-2 border-surface-container-lowest object-cover z-10" data-alt="A small, circular profile picture of an academic researcher with a professional demeanor, set against a neutral gray background. The image is clean and well-lit." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW72mvD_kWQZ7ty2v9BegFdAEyesP0Su1lSsUlFqMaR_L-VCI1Ku8-7QtMdz0L__Zu2IWUUeW_-DZTw-I9iEcl4eV2t5m-QTHvCZKxgt17G7c5vOT1Uiz7btQkAw5KGsbbAHGJztffoom1DW0y1HsWVpw4HBhaMGtqmplzYvYiuAHdm22xaJn5bUcY0yH3E7uN3_c-WtTgJW4mobzpnC9AGzKGpRCiZA8iNqou0gDFv-4CprM7i7ns"/>
+</div>
+</div>
+</div>
+</li>
+<!-- Item 3 -->
+<li class="p-6 hover:bg-surface-container-low transition-colors group cursor-pointer">
+<div class="flex justify-between items-start gap-4">
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-2">
+<span class="px-2.5 py-1 rounded-full bg-surface-variant text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">CHL-2023-102</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-variant text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Pending Review
+                                            </span>
+</div>
+<h4 class="font-headline-sm text-headline-md text-primary group-hover:text-primary-container transition-colors line-clamp-1">Crop Yield Prediction Model Optimization</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Refine machine learning models to improve the accuracy of crop yield predictions based on historical climate data.</p>
+</div>
+<div class="flex flex-col items-end gap-3 shrink-0">
+<p class="font-body-sm text-body-sm text-on-surface-variant">Due: <span class="font-medium text-on-surface">Dec 01, 2023</span></p>
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-lowest bg-surface-variant text-on-surface-variant flex items-center justify-center font-label-sm text-[10px] z-0">TBA</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<!-- Pagination Footer -->
+<div class="p-4 border-t border-outline-variant bg-surface-container-lowest rounded-b-xl flex justify-between items-center">
+<p class="font-body-sm text-body-sm text-on-surface-variant">Showing 1 to 3 of 12 entries</p>
+<div class="flex gap-2">
+<button class="px-3 py-1 rounded border border-outline-variant text-on-surface-variant hover:bg-surface-container-low transition-colors font-label-sm text-label-sm disabled:opacity-50" disabled="">Prev</button>
+<button class="px-3 py-1 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm">1</button>
+<button class="px-3 py-1 rounded border border-outline-variant text-on-surface-variant hover:bg-surface-container-low transition-colors font-label-sm text-label-sm">2</button>
+<button class="px-3 py-1 rounded border border-outline-variant text-on-surface-variant hover:bg-surface-container-low transition-colors font-label-sm text-label-sm">Next</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

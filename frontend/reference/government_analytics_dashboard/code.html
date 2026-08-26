@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Analytics Dashboard - Samadhan Setu</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "primary-container": "#002147",
+                            "on-primary-container": "#708ab5",
+                            "on-secondary": "#ffffff",
+                            "on-surface": "#1a1b1e",
+                            "on-surface-variant": "#44474e",
+                            "on-tertiary-fixed": "#191c1d",
+                            "tertiary": "#090b0c",
+                            "surface-container-highest": "#e3e2e6",
+                            "outline-variant": "#c4c6cf",
+                            "primary": "#000a1e",
+                            "on-secondary-fixed": "#241a00",
+                            "surface-container-low": "#f4f3f7",
+                            "on-tertiary-fixed-variant": "#454748",
+                            "on-background": "#1a1b1e",
+                            "on-secondary-container": "#745c00",
+                            "inverse-surface": "#2f3033",
+                            "primary-fixed-dim": "#aec7f6",
+                            "inverse-primary": "#aec7f6",
+                            "secondary-fixed-dim": "#e9c349",
+                            "surface-tint": "#465f88",
+                            "surface-variant": "#e3e2e6",
+                            "error-container": "#ffdad6",
+                            "background": "#faf9fd",
+                            "on-primary": "#ffffff",
+                            "surface": "#faf9fd",
+                            "secondary": "#735c00",
+                            "secondary-fixed": "#ffe088",
+                            "on-primary-fixed": "#001b3d",
+                            "inverse-on-surface": "#f1f0f4",
+                            "on-secondary-fixed-variant": "#574500",
+                            "on-tertiary-container": "#87898a",
+                            "surface-bright": "#faf9fd",
+                            "outline": "#74777f",
+                            "surface-container-high": "#e9e7eb",
+                            "on-error": "#ffffff",
+                            "surface-container-lowest": "#ffffff",
+                            "secondary-container": "#fed65b",
+                            "on-error-container": "#93000a",
+                            "on-tertiary": "#ffffff",
+                            "surface-container": "#efedf1",
+                            "tertiary-fixed-dim": "#c5c7c8",
+                            "tertiary-fixed": "#e1e3e4",
+                            "on-primary-fixed-variant": "#2d476f",
+                            "primary-fixed": "#d6e3ff",
+                            "error": "#ba1a1a",
+                            "surface-dim": "#dad9dd",
+                            "tertiary-container": "#1f2223"
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                    },
+                    "spacing": {
+                            "margin-mobile": "1rem",
+                            "margin-desktop": "2.5rem",
+                            "gutter": "1.5rem",
+                            "container-max": "1280px",
+                            "stack-sm": "0.5rem",
+                            "stack-lg": "2rem",
+                            "stack-md": "1rem"
+                    },
+                    "fontFamily": {
+                            "headline-xl": ["Poppins"],
+                            "headline-lg": ["Poppins"],
+                            "body-lg": ["Inter"],
+                            "label-md": ["Inter"],
+                            "body-sm": ["Inter"],
+                            "headline-md": ["Poppins"],
+                            "body-md": ["Inter"],
+                            "label-sm": ["Inter"],
+                            "headline-lg-mobile": ["Poppins"]
+                    },
+                    "fontSize": {
+                            "headline-xl": ["40px", {"lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                            "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                            "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                            "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                            "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                            "label-sm": ["12px", {"lineHeight": "14px", "fontWeight": "500"}],
+                            "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        /* Base styles from design system */
+        body {
+            background-color: #F8F9FA;
+            color: #1a1b1e;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="flex h-full overflow-hidden bg-[#F8F9FA]">
+<!-- SideNavBar (from JSON) -->
+<nav class="hidden md:flex flex-col h-full w-[280px] bg-surface-container-lowest border-r border-outline-variant p-4 gap-stack-md shrink-0">
+<div class="flex items-center gap-4 mb-4">
+<img alt="Government Seal of Jharkhand" class="w-12 h-12 object-contain" data-alt="Official Government Seal of Jharkhand, rendered in high resolution with sharp details, featuring the classic circular emblem with intricate local motifs. The image is set against a clean, modern white background, establishing a formal and authoritative yet approachable corporate governance aesthetic. Lighting is even and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlBp7cRkIscWNi-I58Wqvf2m5AbQGwImbl_5nu-PhV9ARjH1Zawt1GHCqQphuKFsB-a3VDLLskQFHRhdXZF-RJBRKnQdEbbkmaUGz4fyqOMUDft78he5HSQfdMk6FZkC6LobpUHH2JJhWBUril1Ww6vphSnbD2HWj9JQV-SaahgWOETBFIi2a_LAiYbtPLd9henSomJDk9EwGKjDVTS43XM-swZLrgHLMlopkd2VaCR19SN41IgUZt"/>
+<div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">Samadhan Setu</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Governance Portal</p>
+</div>
+</div>
+<div class="flex flex-col gap-1 flex-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="report_problem">report_problem</span>
+<span class="font-label-md text-label-md">Grievances</span>
+</a>
+<!-- Active State -->
+<a class="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-lg font-bold transition-transform scale-95" href="#">
+<span class="material-symbols-outlined filled-icon" data-icon="analytics">analytics</span>
+<span class="font-label-md text-label-md">Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="font-label-md text-label-md">Stakeholders</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-label-md text-label-md">Funding</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+</div>
+<div class="mt-auto flex flex-col gap-1 border-t border-outline-variant pt-4">
+<button class="w-full bg-primary-container text-on-primary-container font-label-md text-label-md py-2 px-4 rounded-lg flex items-center justify-center gap-2 hover:opacity-90 transition-opacity mb-4 h-10">
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+                Export Reports
+            </button>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-label-md text-label-md">Help Center</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-label-md text-label-md">Logout</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto bg-[#F8F9FA] p-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<!-- Header -->
+<header class="flex justify-between items-center mb-8">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary">State Analytics Overview</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Real-time governance metrics and project tracking.</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant" data-icon="search">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-lowest border border-outline-variant rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary font-body-sm text-body-sm w-64" placeholder="Search analytics..." type="text"/>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-lowest border border-outline-variant hover:bg-surface-container-low transition-colors relative">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<img alt="User Profile" class="w-10 h-10 rounded-full object-cover border border-outline-variant" data-alt="A professional headshot of a government official or administrator in a business suit. The portrait is well-lit with soft, neutral lighting against a clean white or light gray background, matching the modern corporate governance UI aesthetic. High quality, clear, and trustworthy appearance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ8h_gQ99Eb3eHuRCWGFPaWCSjN3_gwlp60NbyVP43hr3CIpTGmpfVz4FjPjC0RDF2GF0kBXTmRIfp5AnFnrfOc0RSH1MHa9XrH3L6d-M6hQTiOI9GWi8070ojyTtbZBk8vY1HPRAQX1iu782EFXEWHv1d4Qvylu3FG13Bohn0uc0GJo51XhjctkERxUHqU3BBGDby0xoBoFLx1yd1cyCvPB-KGq19ME0qT98vUZPRyRytNUMgdsWB"/>
+</div>
+</header>
+<!-- KPI Grid (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<!-- KPI Card 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-primary" data-icon="report">report</span>
+</div>
+<h3 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-2">Total Reports Filed</h3>
+<div class="flex items-end gap-4">
+<span class="font-headline-xl text-headline-xl text-primary">24,592</span>
+<span class="flex items-center text-sm font-medium text-emerald-600 mb-2">
+<span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span>
+                            +12% this month
+                        </span>
+</div>
+</div>
+<!-- KPI Card 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-secondary-container" data-icon="check_circle">check_circle</span>
+</div>
+<h3 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-2">Resolution Rate</h3>
+<div class="flex items-end gap-4">
+<span class="font-headline-xl text-headline-xl text-primary">78.4%</span>
+<span class="flex items-center text-sm font-medium text-emerald-600 mb-2">
+<span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span>
+                            +3.2% vs last quarter
+                        </span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 mt-4">
+<div class="bg-primary-container h-1.5 rounded-full" style="width: 78.4%"></div>
+</div>
+</div>
+<!-- KPI Card 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-primary" data-icon="school">school</span>
+</div>
+<h3 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-2">Active HEI Partners</h3>
+<div class="flex items-end gap-4">
+<span class="font-headline-xl text-headline-xl text-primary">142</span>
+<span class="flex items-center text-sm font-medium text-on-surface-variant mb-2">
+                            Across 24 districts
+                        </span>
+</div>
+</div>
+</div>
+<!-- Charts Section -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+<!-- District Heatmap Placeholder -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant shadow-sm flex flex-col">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-headline-md text-headline-md text-primary">District-wise Activity</h3>
+<button class="text-primary hover:bg-surface-container-low p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+<div class="flex-1 min-h-[300px] bg-surface-container-low rounded-lg relative overflow-hidden flex items-center justify-center">
+<!-- Using a map image placeholder -->
+<div class="bg-cover bg-center w-full h-full absolute inset-0 opacity-80" data-alt="A stylized, modern, data-driven map of Jharkhand state in India, designed as a choropleth or heatmap. The map uses a sleek corporate color palette of navy blues and subtle grays, with varying shades of blue representing data density across different districts. The background is a clean, minimal white. The visual style is crisp, vector-like, and highly professional, suitable for a high-end government analytics dashboard." data-location="Jharkhand" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAUglncrTtuvyLH9xz5UJMX8ODM4JcBM3EmhF4X2Bvx9fU0uwExCCCMA_Gor-5edFHAFkzOCoZQiDol2-0rNVsrwAgA5GygBUZAlA4SoTUSOzhsk7nzLsF0pR65IVcCLFiYwIT1te0i4EbvadoIHpc9t81LG6BsATSVHwJT0abzb6F6s0dqiYdnrASoz8tBPYUUIA7VGF0Cop1v4bDlH_nqTRZX0o_ym7xo8adIZDY0dEsrsmTQTyS6')"></div>
+<!-- Overlay UI for map -->
+<div class="absolute bottom-4 right-4 bg-surface-container-lowest p-3 rounded-lg border border-outline-variant shadow-sm text-xs">
+<div class="font-semibold mb-1">Activity Level</div>
+<div class="flex items-center gap-1">
+<div class="w-3 h-3 bg-blue-100 rounded-sm"></div>
+<div class="w-3 h-3 bg-blue-300 rounded-sm"></div>
+<div class="w-3 h-3 bg-blue-500 rounded-sm"></div>
+<div class="w-3 h-3 bg-blue-700 rounded-sm"></div>
+<div class="w-3 h-3 bg-[#002147] rounded-sm"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Domain Distribution Bar Chart -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant shadow-sm flex flex-col">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-headline-md text-headline-md text-primary">Domain Distribution</h3>
+<select class="bg-surface-container-low border-none rounded-lg text-sm font-medium py-1 px-3 focus:ring-0">
+<option>This Year</option>
+<option>Last Year</option>
+</select>
+</div>
+<div class="flex-1 flex flex-col justify-end gap-4 min-h-[300px] pt-4">
+<!-- Simulated Bar Chart -->
+<div class="flex items-end gap-2 h-full">
+<div class="flex-1 flex flex-col items-center gap-2 group">
+<div class="w-full bg-primary-container rounded-t-sm h-[80%] group-hover:opacity-80 transition-opacity relative">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-surface text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">1,240</div>
+</div>
+<span class="text-xs font-medium text-on-surface-variant truncate w-full text-center">Infrastructure</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2 group">
+<div class="w-full bg-surface-tint rounded-t-sm h-[65%] group-hover:opacity-80 transition-opacity relative">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-surface text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">980</div>
+</div>
+<span class="text-xs font-medium text-on-surface-variant truncate w-full text-center">Education</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2 group">
+<div class="w-full bg-primary-container rounded-t-sm h-[45%] group-hover:opacity-80 transition-opacity relative">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-surface text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">710</div>
+</div>
+<span class="text-xs font-medium text-on-surface-variant truncate w-full text-center">Healthcare</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2 group">
+<div class="w-full bg-surface-tint rounded-t-sm h-[90%] group-hover:opacity-80 transition-opacity relative">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-surface text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">1,450</div>
+</div>
+<span class="text-xs font-medium text-on-surface-variant truncate w-full text-center">Sanitation</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2 group">
+<div class="w-full bg-secondary-container rounded-t-sm h-[30%] group-hover:opacity-80 transition-opacity relative">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-surface text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">420</div>
+</div>
+<span class="text-xs font-medium text-on-surface-variant truncate w-full text-center">Agriculture</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Data Table Section -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden mb-8">
+<div class="p-6 border-b border-outline-variant flex justify-between items-center bg-[#ffffff]">
+<h3 class="font-headline-md text-headline-md text-primary">Active Projects Tracking</h3>
+<button class="text-primary text-sm font-medium hover:underline">View All Projects</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-[#F1F3F5] text-on-surface-variant border-b border-outline-variant">
+<th class="py-3 px-6 font-label-md text-label-md font-semibold">Project ID</th>
+<th class="py-3 px-6 font-label-md text-label-md font-semibold">Description</th>
+<th class="py-3 px-6 font-label-md text-label-md font-semibold">Assigned HEI</th>
+<th class="py-3 px-6 font-label-md text-label-md font-semibold">Industry Partner</th>
+<th class="py-3 px-6 font-label-md text-label-md font-semibold">Status</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm">
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors">
+<td class="py-4 px-6 font-medium text-primary">PRJ-2023-089</td>
+<td class="py-4 px-6">Rural Water Purification System</td>
+<td class="py-4 px-6 text-on-surface-variant">IIT Dhanbad</td>
+<td class="py-4 px-6 text-on-surface-variant">Tata Steel CSR</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#e6f4ea] text-[#1e8e3e] border border-[#1e8e3e]/20">
+                                        In Progress
+                                    </span>
+</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors bg-[#F8F9FA]">
+<td class="py-4 px-6 font-medium text-primary">PRJ-2023-112</td>
+<td class="py-4 px-6">Smart Grid Implementation Pilot</td>
+<td class="py-4 px-6 text-on-surface-variant">NIT Jamshedpur</td>
+<td class="py-4 px-6 text-on-surface-variant">Adani Power</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#fef7e0] text-[#b06000] border border-[#b06000]/20">
+                                        Pending Review
+                                    </span>
+</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors">
+<td class="py-4 px-6 font-medium text-primary">PRJ-2023-145</td>
+<td class="py-4 px-6">Digital Literacy Centers - Phase 2</td>
+<td class="py-4 px-6 text-on-surface-variant">Ranchi University</td>
+<td class="py-4 px-6 text-on-surface-variant">Wipro Foundation</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#e6f4ea] text-[#1e8e3e] border border-[#1e8e3e]/20">
+                                        In Progress
+                                    </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors bg-[#F8F9FA]">
+<td class="py-4 px-6 font-medium text-primary">PRJ-2023-056</td>
+<td class="py-4 px-6">Agricultural Soil Health Monitoring</td>
+<td class="py-4 px-6 text-on-surface-variant">BAU Ranchi</td>
+<td class="py-4 px-6 text-on-surface-variant">Jindal Steel</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#fce8e6] text-[#c5221f] border border-[#c5221f]/20">
+                                        Action Required
+                                    </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+</body></html>

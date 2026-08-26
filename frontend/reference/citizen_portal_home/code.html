@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Samadhan Setu - Citizen Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-container": "#002147",
+                        "on-primary-container": "#708ab5",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#1a1b1e",
+                        "on-surface-variant": "#44474e",
+                        "on-tertiary-fixed": "#191c1d",
+                        "tertiary": "#090b0c",
+                        "surface-container-highest": "#e3e2e6",
+                        "outline-variant": "#c4c6cf",
+                        "primary": "#000a1e",
+                        "on-secondary-fixed": "#241a00",
+                        "surface-container-low": "#f4f3f7",
+                        "on-tertiary-fixed-variant": "#454748",
+                        "on-background": "#1a1b1e",
+                        "on-secondary-container": "#745c00",
+                        "inverse-surface": "#2f3033",
+                        "primary-fixed-dim": "#aec7f6",
+                        "inverse-primary": "#aec7f6",
+                        "secondary-fixed-dim": "#e9c349",
+                        "surface-tint": "#465f88",
+                        "surface-variant": "#e3e2e6",
+                        "error-container": "#ffdad6",
+                        "background": "#faf9fd",
+                        "on-primary": "#ffffff",
+                        "surface": "#faf9fd",
+                        "secondary": "#735c00",
+                        "secondary-fixed": "#ffe088",
+                        "on-primary-fixed": "#001b3d",
+                        "inverse-on-surface": "#f1f0f4",
+                        "on-secondary-fixed-variant": "#574500",
+                        "on-tertiary-container": "#87898a",
+                        "surface-bright": "#faf9fd",
+                        "outline": "#74777f",
+                        "surface-container-high": "#e9e7eb",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#fed65b",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#efedf1",
+                        "tertiary-fixed-dim": "#c5c7c8",
+                        "tertiary-fixed": "#e1e3e4",
+                        "on-primary-fixed-variant": "#2d476f",
+                        "primary-fixed": "#d6e3ff",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#dad9dd",
+                        "tertiary-container": "#1f2223"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "margin-mobile": "1rem",
+                        "margin-desktop": "2.5rem",
+                        "gutter": "1.5rem",
+                        "container-max": "1280px",
+                        "stack-sm": "0.5rem",
+                        "stack-lg": "2rem",
+                        "stack-md": "1rem"
+                    },
+                    fontFamily: {
+                        "headline-xl": ["Poppins"],
+                        "headline-lg": ["Poppins"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-md": ["Poppins"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Poppins"]
+                    },
+                    fontSize: {
+                        "headline-xl": ["40px", { lineHeight: "52px", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "600" }],
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                        "label-md": ["14px", { lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "600" }],
+                        "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+                        "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "label-sm": ["12px", { lineHeight: "14px", fontWeight: "500" }],
+                        "headline-lg-mobile": ["28px", { lineHeight: "36px", fontWeight: "600" }]
+                    }
+                }
+            }
+        };
+    </script>
+<style>
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+        body { -webkit-tap-highlight-color: transparent; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-[80px]">
+<!-- Top App Bar (Hidden on mobile, showing as per JSON logic, but this is a mobile-first PWA so we'll adapt slightly for a clean top header) -->
+<header class="bg-surface shadow-sm docked full-width top-0 sticky z-40">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container shrink-0">
+<img alt="State Seal" class="w-full h-full object-cover" data-alt="A highly detailed close-up of a government seal or emblem from Jharkhand, India, featuring Ashoka Chakra and geometric patterns. High quality, crisp lines, professional state branding aesthetic in a well-lit studio environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzSDwAXmrdYEFxAvb73oUtdN8s-TrN6dqkR9sg7NcxeKmV_fga-NjXJjitsUse0DR6bXbgigKNc9BwGaHhV70oeGbfu6Pr2ZpdYeUxI2vzpveNAcagxr8unIUr_x1ZrWmLYnit4N4Xul3Kof4PG1TIKNqA4zxxD49wPaxqmvzm09pA3Z2TIm2jETPKkcNjJtKIEo4z-8UQ0qZrpWNaDtG9N141Sz2jFd8WL_K3a_YEsCYKWjewT8li"/>
+</div>
+<div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">Samadhan Setu</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Jharkhand Governance Portal</p>
+</div>
+</div>
+<div class="flex items-center gap-4 text-primary dark:text-primary-fixed-dim">
+<button class="w-10 h-10 rounded-full flex items-center justify-center bg-surface-container hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="px-margin-mobile py-stack-md flex flex-col gap-stack-lg max-w-container-max mx-auto md:px-margin-desktop">
+<!-- Hero Section with CTA -->
+<section class="bg-primary-container text-on-primary rounded-xl p-6 relative overflow-hidden shadow-sm">
+<div class="absolute inset-0 z-0 opacity-20" data-alt="A subtle, modern geometric pattern background in deep navy blue, overlaid with a soft light mode professional aesthetic. Clean, abstract lines representing connectivity and governance infrastructure, high resolution, dark overlay texturing." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDWpY8glfHtVOBppJ1IBn0e63da6KA1Xg6dODXgIdnNfHDsXCKtWnQAJUdA1JFSi5tbKw_DHOQf3aijRRCETnyw-Nr6mz8h6tdepMz8eSXrFxMI3fAFmPHoW5R3nujSvCBTeTPuowZC9s0SNArL83qWacy8dr8u-yzPVyGe92T9zJaRIVUOtpcd106vXeWm8d75UiL4vdrZAwxMvID9qQEs4n-YY6sqp0Tr45E3ud1RmlKl4qW2j_Ut')"></div>
+<div class="relative z-10 flex flex-col gap-4">
+<div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg mb-1">Welcome back, Rahul</h2>
+<p class="font-body-sm text-body-sm text-primary-fixed opacity-90">Ranchi, Jharkhand</p>
+</div>
+<p class="font-body-md text-body-md mt-2">Empowering citizens to build better communities. Report civic issues directly to local authorities.</p>
+<button class="mt-4 bg-secondary-container text-on-secondary-container font-label-md text-label-md py-4 px-6 rounded-lg w-full flex items-center justify-center gap-2 hover:bg-secondary-fixed transition-colors shadow-md">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+                    Report a Problem
+                </button>
+</div>
+</section>
+<!-- Quick Stats Bento Grid -->
+<section class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 flex flex-col gap-2 shadow-sm">
+<div class="w-8 h-8 rounded-full bg-primary-fixed text-on-primary-fixed-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">task_alt</span>
+</div>
+<div class="mt-2">
+<p class="font-headline-md text-headline-md text-primary">12</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Issues Resolved</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 flex flex-col gap-2 shadow-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">pending_actions</span>
+</div>
+<div class="mt-2">
+<p class="font-headline-md text-headline-md text-primary">3</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">In Progress</p>
+</div>
+</div>
+</section>
+<!-- Recent Issues List -->
+<section class="flex flex-col gap-stack-md">
+<div class="flex justify-between items-center">
+<h3 class="font-headline-md text-headline-md text-on-surface">Recent Issues</h3>
+<a class="font-label-md text-label-md text-primary hover:underline" href="#">View All</a>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Issue Item 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">water_drop</span>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider text-[10px]">Water Supply</span>
+</div>
+<span class="bg-surface-variant text-on-surface-variant font-label-sm text-label-sm px-2 py-1 rounded-full text-[10px]">Pending</span>
+</div>
+<div>
+<h4 class="font-body-md text-body-md font-semibold text-on-surface">Broken Pipe near Main Road</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Continuous water leakage for the past 2 days near the main market square.</p>
+</div>
+<div class="flex justify-between items-center mt-1 border-t border-outline-variant pt-3">
+<p class="font-label-sm text-label-sm text-on-surface-variant">Today, 10:30 AM</p>
+<p class="font-label-sm text-label-sm text-primary font-medium">ID: #JHR-8291</p>
+</div>
+</div>
+<!-- Issue Item 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">construction</span>
+<span class="font-label-md text-label-md text-primary uppercase tracking-wider text-[10px]">Road Maintenance</span>
+</div>
+<span class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-2 py-1 rounded-full text-[10px]">In Progress</span>
+</div>
+<div>
+<h4 class="font-body-md text-body-md font-semibold text-on-surface">Deep Potholes on Ring Road</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Multiple large potholes causing traffic disruption and vehicle damage.</p>
+</div>
+<div class="flex justify-between items-center mt-1 border-t border-outline-variant pt-3">
+<p class="font-label-sm text-label-sm text-on-surface-variant">Oct 15, 2023</p>
+<p class="font-label-sm text-label-sm text-primary font-medium">ID: #JHR-8102</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar (Mobile) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 pb-safe bg-surface dark:bg-surface-dim shadow-[0_-4px_12px_rgba(0,33,71,0.08)] rounded-t-xl md:hidden">
+<!-- Active Tab: Home (Implied by Intent) -->
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary rounded-full px-4 py-1 scale-90 transition-all opacity-80" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+<span class="font-label-sm text-label-sm mt-1">Report</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-tertiary-container hover:text-primary-container dark:hover:text-primary-fixed transition-colors active:bg-surface-container-high px-2 py-1" href="#">
+<span class="material-symbols-outlined">list_alt</span>
+<span class="font-label-sm text-label-sm mt-1">My Issues</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-tertiary-container hover:text-primary-container dark:hover:text-primary-fixed transition-colors active:bg-surface-container-high px-2 py-1" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="font-label-sm text-label-sm mt-1">Map</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-tertiary-container hover:text-primary-container dark:hover:text-primary-fixed transition-colors active:bg-surface-container-high px-2 py-1" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

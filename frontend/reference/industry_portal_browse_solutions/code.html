@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Samadhan Setu - Browse Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-container": "#002147",
+                      "on-primary-container": "#708ab5",
+                      "on-secondary": "#ffffff",
+                      "on-surface": "#1a1b1e",
+                      "on-surface-variant": "#44474e",
+                      "on-tertiary-fixed": "#191c1d",
+                      "tertiary": "#090b0c",
+                      "surface-container-highest": "#e3e2e6",
+                      "outline-variant": "#c4c6cf",
+                      "primary": "#000a1e",
+                      "on-secondary-fixed": "#241a00",
+                      "surface-container-low": "#f4f3f7",
+                      "on-tertiary-fixed-variant": "#454748",
+                      "on-background": "#1a1b1e",
+                      "on-secondary-container": "#745c00",
+                      "inverse-surface": "#2f3033",
+                      "primary-fixed-dim": "#aec7f6",
+                      "inverse-primary": "#aec7f6",
+                      "secondary-fixed-dim": "#e9c349",
+                      "surface-tint": "#465f88",
+                      "surface-variant": "#e3e2e6",
+                      "error-container": "#ffdad6",
+                      "background": "#faf9fd",
+                      "on-primary": "#ffffff",
+                      "surface": "#faf9fd",
+                      "secondary": "#735c00",
+                      "secondary-fixed": "#ffe088",
+                      "on-primary-fixed": "#001b3d",
+                      "inverse-on-surface": "#f1f0f4",
+                      "on-secondary-fixed-variant": "#574500",
+                      "on-tertiary-container": "#87898a",
+                      "surface-bright": "#faf9fd",
+                      "outline": "#74777f",
+                      "surface-container-high": "#e9e7eb",
+                      "on-error": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-container": "#fed65b",
+                      "on-error-container": "#93000a",
+                      "on-tertiary": "#ffffff",
+                      "surface-container": "#efedf1",
+                      "tertiary-fixed-dim": "#c5c7c8",
+                      "tertiary-fixed": "#e1e3e4",
+                      "on-primary-fixed-variant": "#2d476f",
+                      "primary-fixed": "#d6e3ff",
+                      "error": "#ba1a1a",
+                      "surface-dim": "#dad9dd",
+                      "tertiary-container": "#1f2223"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "1rem",
+                      "margin-desktop": "2.5rem",
+                      "gutter": "1.5rem",
+                      "container-max": "1280px",
+                      "stack-sm": "0.5rem",
+                      "stack-lg": "2rem",
+                      "stack-md": "1rem"
+              },
+              "fontFamily": {
+                      "headline-xl": ["Poppins"],
+                      "headline-lg": ["Poppins"],
+                      "body-lg": ["Inter"],
+                      "label-md": ["Inter"],
+                      "body-sm": ["Inter"],
+                      "headline-md": ["Poppins"],
+                      "body-md": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "headline-lg-mobile": ["Poppins"]
+              },
+              "fontSize": {
+                      "headline-xl": ["40px", {"lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "14px", "fontWeight": "500"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}]
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background h-full font-body-md antialiased flex overflow-hidden">
+<!-- SideNavBar -->
+<nav class="hidden md:flex flex-col h-full p-4 gap-stack-md bg-surface-container-lowest border-r border-outline-variant fixed left-0 top-0 w-[280px] z-40">
+<!-- Header -->
+<div class="flex items-center gap-3 px-2 py-4 mb-4">
+<img alt="Government Seal of Jharkhand" class="w-10 h-10 object-contain rounded-full border border-outline-variant" data-alt="A small, high-resolution official state seal of Jharkhand, suitable for a web application header logo. Light mode background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLP7KBmHUdYahypgE9S_JBVGrAsepzJJ_tLNzPUpBXzXvm9x8OF_Rnqp0APy0g8_dz3V7U3pCIXyaIskFfQ1mS1u1wSOcOraF8Lo2rml40SZu7dSy9epkLH-bi9cRFg_9376vXkfqmMB1UB_DmA2J4B5lHYqgFy4nxCypNSX-itnWWEBKdR7ymuHuu4aQhodRt26nMYU3tH1-qEe1cv58JpuslrT-T60CPxZK03FY19IKIxZVlUmZn"/>
+<div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">Samadhan Setu</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Governance Portal</p>
+</div>
+</div>
+<!-- Navigation Links -->
+<div class="flex-1 flex flex-col gap-1 overflow-y-auto">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:bg-surface-container-high transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:bg-surface-container-high transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="report_problem">report_problem</span>
+<span class="font-label-md text-label-md">Grievances</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:bg-surface-container-high transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-label-md text-label-md">Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:bg-surface-container-high transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="font-label-md text-label-md">Stakeholders</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary-container text-on-primary-container font-bold hover:bg-surface-container-high transition-all duration-200 scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-label-md text-label-md">Funding</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:bg-surface-container-high transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+<!-- Filters Section -->
+<div class="mt-8 px-4">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-4">Filter by Sector</h3>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="rounded border-outline-variant text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">Water Management</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="rounded border-outline-variant text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">Infrastructure</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="rounded border-outline-variant text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">Education</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="rounded border-outline-variant text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">Healthcare</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="mt-auto pt-4 border-t border-outline-variant flex flex-col gap-1">
+<button class="w-full bg-primary text-on-primary font-label-md text-label-md py-3 rounded-lg hover:opacity-90 transition-opacity mb-4">
+                Export Reports
+            </button>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:bg-surface-container-high transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-label-md text-label-md">Help Center</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:bg-surface-container-high transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-label-md text-label-md">Logout</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 ml-[280px] flex flex-col h-full bg-surface-container">
+<!-- TopAppBar (CSR Tracking Stats) -->
+<header class="bg-surface shadow-sm sticky top-0 z-30 border-b-0">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-primary">Browse HEI-Vetted Solutions</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Discover and fund high-impact projects vetted by top educational institutions.</p>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex flex-col items-end">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total CSR Funds Disbursed</span>
+<span class="font-headline-md text-headline-md font-bold text-primary">₹14.2 Cr</span>
+</div>
+<div class="h-10 w-px bg-outline-variant"></div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-primary-container transition-colors relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+<img alt="Profile" class="w-10 h-10 rounded-full border border-outline-variant object-cover" data-alt="A professional headshot of a corporate executive in a modern office setting. High resolution, well lit." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdsIUdUOBixBynP1SS5gUb87KdIJVvV-G3nqFk3PWhG8x5FdzGa2g14brStgTBRaC_E5sSBa2NetAh1DfryaxARCFabQ0rVG3Gp69KgqHjhIERJ0JQmcEmP-9PxN3ufraxLZ5RCUpMP89DREx26UYUI_0ay3i3-wONaokjcevfbttcHVLlmU8Uin_otveyY8aF32mgsgDJ7ydZymba0hoy7ItYtAPU0NFwEkCG-cHAhpj2x2FomrsC"/>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Canvas -->
+<div class="flex-1 overflow-y-auto p-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<!-- Bento Grid Layout for Projects -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Project Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col">
+<div class="relative h-48">
+<img alt="Project Image" class="w-full h-full object-cover" data-alt="A modern water purification plant in a rural Indian setting. Clean, architectural, bright daylight, highlighting technology and community impact." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBa6qlfKVdyDcEl3twKu6zegu6A-D7arNm6MVvNnesBb54CrDyPOfJxhfQTEWVSZz0FdMB7YvVOc8rOCVprRTOF3lT67QFnxf5jXY3IbKlEXzP7a2Ej6k_djaFE_4dmOu2Ab_GXPkxG-EDswFfUy1DQjoMqFiTyx698I0Bd8hs2UkhRH3C_OaUPrAxPknnSzULga5WQwpG1Rf6KlmvplxbSXxfAVRZ3MtJODNO4mk0gyTSrNjQpkn2"/>
+<div class="absolute top-4 right-4 bg-surface-container-lowest px-3 py-1 rounded-full border border-outline-variant flex items-center gap-1 shadow-sm">
+<span class="w-2 h-2 bg-primary rounded-full"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Vetted by IIT ISM</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="water_drop">water_drop</span>
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-wider">Water Management</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-semibold text-primary mb-2">Jharia Ground Water Rejuvenation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 line-clamp-3">Implementing localized aquifer recharge structures and smart monitoring IoT sensors to combat severe water depletion in mining-affected regions.</p>
+<div class="mt-auto space-y-4">
+<div class="bg-surface-container-low p-3 rounded-lg border border-outline-variant">
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-1">Proposed Solution</p>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">IoT-enabled percolation tanks &amp; modular filtration.</p>
+</div>
+<div class="flex justify-between items-center">
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Funding Required</p>
+<p class="font-label-md text-label-md text-primary font-bold">₹45 Lakhs</p>
+</div>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-4 py-2 rounded-lg hover:opacity-90 transition-opacity">Fund Project</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col">
+<div class="relative h-48">
+<img alt="Project Image" class="w-full h-full object-cover" data-alt="A modern rural school classroom in India equipped with smart boards and digital learning tools. Bright, optimistic, educational setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZC5qVgipA_Ej0rn85M4zHqtyWEvGT1j47MylclnWG_9eZU70tifEppiK7_xaeC6G9Nh-UHV9Lgb5yCvj4HlhcXPz-b8Lt9K9ssFNi3jq7E0p-DXTpli7DQSBdfYMHVdzDhOLILmCd1k78TW9bP8nLXJmNqSOoIluvgel-PnTPCuKB7us5we8qh0yASgFm-bLyPiCYFSAECXGopgDMiL-DQKjbwFeRJawBHVeEgOK6GGDC1cLnVXxF"/>
+<div class="absolute top-4 right-4 bg-surface-container-lowest px-3 py-1 rounded-full border border-outline-variant flex items-center gap-1 shadow-sm">
+<span class="w-2 h-2 bg-primary rounded-full"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Vetted by BIT Mesra</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="school">school</span>
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-wider">Education</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-semibold text-primary mb-2">Digital Literacy Hubs for Rural Schools</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 line-clamp-3">Establishing solar-powered computer labs with satellite internet connectivity in remote tribal villages to bridge the digital divide.</p>
+<div class="mt-auto space-y-4">
+<div class="bg-surface-container-low p-3 rounded-lg border border-outline-variant">
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-1">Mentorship Required</p>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">IT Infrastructure &amp; Curriculum Design experts.</p>
+</div>
+<div class="flex justify-between items-center">
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Funding Required</p>
+<p class="font-label-md text-label-md text-primary font-bold">₹22 Lakhs</p>
+</div>
+<button class="bg-secondary text-on-secondary font-label-md text-label-md px-4 py-2 rounded-lg hover:opacity-90 transition-opacity">Offer Mentorship</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col">
+<div class="relative h-48">
+<img alt="Project Image" class="w-full h-full object-cover" data-alt="A structurally engineered small bridge over a rural stream in India, constructed with modern sustainable materials. Engineering focus, daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChi-IyE4KSM4xg2uo6ktRCwkN2lwoRKrTwW1lAo8ZnMiyynnx2VmDXuiC6dPfPHScit8OLRx-JFGXedDLU4dHg9kYGPxVPOUATN22rcWPLvpXGXhGpcHzYxNEPa1eyoOLufdKM11OpgwmoOFVh2wk9WFo63HCSosIwsDAIZKZaed1VxiT2vWG4YvNYtf6BDBOWnR6Iwr7pqLYkqwgnCN1IvHvM7JFXiZLcJlvWqT25Z0rB-HD_6k-F"/>
+<div class="absolute top-4 right-4 bg-surface-container-lowest px-3 py-1 rounded-full border border-outline-variant flex items-center gap-1 shadow-sm">
+<span class="w-2 h-2 bg-primary rounded-full"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Vetted by NIT Jamshedpur</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="architecture">architecture</span>
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-wider">Infrastructure</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-semibold text-primary mb-2">Sustainable All-Weather Rural Connectors</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 line-clamp-3">Designing and deploying low-cost, high-durability modular bridges using recycled materials to connect isolated villages during monsoons.</p>
+<div class="mt-auto space-y-4">
+<div class="bg-surface-container-low p-3 rounded-lg border border-outline-variant">
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-1">Proposed Solution</p>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">Prefabricated eco-composite truss bridges.</p>
+</div>
+<div class="flex justify-between items-center">
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Funding Required</p>
+<p class="font-label-md text-label-md text-primary font-bold">₹85 Lakhs</p>
+</div>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-4 py-2 rounded-lg hover:opacity-90 transition-opacity">Fund Project</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

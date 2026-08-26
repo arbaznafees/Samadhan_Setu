@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Report Issue - Samadhan Setu</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-container": "#002147",
+                      "on-primary-container": "#708ab5",
+                      "on-secondary": "#ffffff",
+                      "on-surface": "#1a1b1e",
+                      "on-surface-variant": "#44474e",
+                      "on-tertiary-fixed": "#191c1d",
+                      "tertiary": "#090b0c",
+                      "surface-container-highest": "#e3e2e6",
+                      "outline-variant": "#c4c6cf",
+                      "primary": "#000a1e",
+                      "on-secondary-fixed": "#241a00",
+                      "surface-container-low": "#f4f3f7",
+                      "on-tertiary-fixed-variant": "#454748",
+                      "on-background": "#1a1b1e",
+                      "on-secondary-container": "#745c00",
+                      "inverse-surface": "#2f3033",
+                      "primary-fixed-dim": "#aec7f6",
+                      "inverse-primary": "#aec7f6",
+                      "secondary-fixed-dim": "#e9c349",
+                      "surface-tint": "#465f88",
+                      "surface-variant": "#e3e2e6",
+                      "error-container": "#ffdad6",
+                      "background": "#faf9fd",
+                      "on-primary": "#ffffff",
+                      "surface": "#faf9fd",
+                      "secondary": "#735c00",
+                      "secondary-fixed": "#ffe088",
+                      "on-primary-fixed": "#001b3d",
+                      "inverse-on-surface": "#f1f0f4",
+                      "on-secondary-fixed-variant": "#574500",
+                      "on-tertiary-container": "#87898a",
+                      "surface-bright": "#faf9fd",
+                      "outline": "#74777f",
+                      "surface-container-high": "#e9e7eb",
+                      "on-error": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-container": "#fed65b",
+                      "on-error-container": "#93000a",
+                      "on-tertiary": "#ffffff",
+                      "surface-container": "#efedf1",
+                      "tertiary-fixed-dim": "#c5c7c8",
+                      "tertiary-fixed": "#e1e3e4",
+                      "on-primary-fixed-variant": "#2d476f",
+                      "primary-fixed": "#d6e3ff",
+                      "error": "#ba1a1a",
+                      "surface-dim": "#dad9dd",
+                      "tertiary-container": "#1f2223"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "1rem",
+                      "margin-desktop": "2.5rem",
+                      "gutter": "1.5rem",
+                      "container-max": "1280px",
+                      "stack-sm": "0.5rem",
+                      "stack-lg": "2rem",
+                      "stack-md": "1rem"
+              },
+              "fontFamily": {
+                      "headline-xl": [
+                              "Poppins"
+                      ],
+                      "headline-lg": [
+                              "Poppins"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Poppins"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Poppins"
+                      ]
+              },
+              "fontSize": {
+                      "headline-xl": [
+                              "40px",
+                              {
+                                      "lineHeight": "52px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "14px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        /* Custom styled file input */
+        input[type="file"]::file-selector-button {
+            display: none;
+        }
+        
+        /* Smooth transitions for form states */
+        .input-group:focus-within label {
+            color: theme('colors.primary-container');
+        }
+        .input-group:focus-within .icon {
+            color: theme('colors.primary-container');
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md overflow-x-hidden selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top App Bar (Suppressed Navigation for Transactional Screen) -->
+<header class="bg-surface shadow-sm docked full-width top-0 sticky z-40 transition-shadow">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<button aria-label="Go back" class="p-2 rounded-full hover:bg-surface-container-high transition-colors active:scale-95 touch-manipulation">
+<span class="material-symbols-outlined text-on-surface" style="font-variation-settings: 'FILL' 0;">arrow_back</span>
+</button>
+<h1 class="font-headline-lg-mobile md:font-headline-md text-headline-lg-mobile md:text-headline-md font-bold text-primary">Report Issue</h1>
+</div>
+<!-- Language Selector -->
+<div class="flex items-center bg-surface-container-low rounded-full p-1 border border-outline-variant/30">
+<button class="px-3 py-1 rounded-full text-label-sm font-label-md bg-white shadow-sm text-primary transition-all">EN</button>
+<button class="px-3 py-1 rounded-full text-label-sm font-label-md text-on-surface-variant hover:text-primary transition-all">HI</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-2xl mx-auto px-margin-mobile py-6 flex flex-col gap-stack-lg pb-32">
+<!-- Introduction Context -->
+<div class="bg-primary-container/5 border border-primary-container/10 rounded-xl p-4 flex gap-4 items-start shadow-sm">
+<span class="material-symbols-outlined text-primary-container shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">info</span>
+<div>
+<p class="font-body-sm text-body-sm text-on-surface">Please provide detailed information about the issue to help us resolve it quickly. False reporting may lead to account suspension.</p>
+</div>
+</div>
+<form action="#" class="flex flex-col gap-stack-md" id="issueForm" method="POST">
+<!-- Category Selection -->
+<div class="input-group flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1 transition-colors" for="category">
+<span class="text-error">*</span> Category
+                </label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant/70 pointer-events-none icon transition-colors" style="font-variation-settings: 'FILL' 0;">category</span>
+<select class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg py-3 pl-10 pr-10 font-body-md text-body-md text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-shadow appearance-none" id="category" name="category" required="">
+<option disabled="" selected="" value="">Select issue category...</option>
+<option value="infrastructure">Infrastructure &amp; Roads</option>
+<option value="sanitation">Water &amp; Sanitation</option>
+<option value="electricity">Electricity &amp; Power</option>
+<option value="education">Education Facilities</option>
+<option value="other">Other</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none" style="font-variation-settings: 'FILL' 0;">expand_more</span>
+</div>
+</div>
+<!-- Title -->
+<div class="input-group flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1 transition-colors" for="title">
+<span class="text-error">*</span> Issue Title
+                </label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-3 text-on-surface-variant/70 pointer-events-none icon transition-colors" style="font-variation-settings: 'FILL' 0;">title</span>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg py-3 pl-10 pr-4 font-body-md text-body-md text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-shadow placeholder:text-on-surface-variant/50" id="title" name="title" placeholder="Briefly describe the issue" required="" type="text"/>
+</div>
+</div>
+<!-- Description -->
+<div class="input-group flex flex-col gap-1">
+<div class="flex justify-between items-baseline">
+<label class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1 transition-colors" for="description">
+<span class="text-error">*</span> Detailed Description
+                    </label>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70">0/500</span>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-3 text-on-surface-variant/70 pointer-events-none icon transition-colors" style="font-variation-settings: 'FILL' 0;">notes</span>
+<textarea class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg py-3 pl-10 pr-4 font-body-md text-body-md text-on-surface focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-shadow placeholder:text-on-surface-variant/50 resize-none" id="description" name="description" placeholder="Provide specific details about the problem, affected area, and how long it has persisted." required="" rows="4"></textarea>
+</div>
+</div>
+<!-- Photo/Video Upload Area -->
+<div class="flex flex-col gap-2 mt-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Evidence (Photos/Videos)</label>
+<div class="border-2 border-dashed border-outline-variant/60 rounded-xl bg-surface-container-lowest p-6 flex flex-col items-center justify-center text-center hover:bg-surface-container-low transition-colors cursor-pointer group relative overflow-hidden">
+<input accept="image/*,video/*" aria-label="Upload evidence files" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" id="media-upload" multiple="" type="file"/>
+<div class="w-12 h-12 bg-primary-container/10 text-primary-container rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add_photo_alternate</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface mb-1">Tap to capture or upload</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Max 3 files (JPG, PNG, MP4) up to 10MB total</p>
+</div>
+</div>
+<!-- Location Picker -->
+<div class="flex flex-col gap-2 mt-2">
+<label class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="text-error">*</span> Incident Location
+                </label>
+<div class="border border-outline-variant rounded-xl overflow-hidden bg-surface-container-lowest shadow-sm flex flex-col">
+<!-- Mini Map Preview Area -->
+<div class="h-32 bg-surface-container-high relative w-full overflow-hidden">
+<img alt="Map preview" class="w-full h-full object-cover opacity-80" data-alt="A stylized, clean vector map interface centered on a generic street intersection. The map uses a light-mode color palette with soft gray roads, subtle green park areas, and a prominent dark blue pin marker indicating a selected location. The style is modern, minimalist, and functional, typical of a corporate navigation app." data-location="Jharkhand" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiG6A9ALuvj9okfJLJX-HLWlAZjsmv9kg8lMJVcnRhLxX-KQhunj0WTeSs3Wyzza3l71lVwtPEe8iQNl0AeQ8ZTLWPoqATsL0PgM-uoQ6jKTkDL-NNWawnLEeoHSSKm4PUm3RTjAEdH2fQbw4Pwr_hBcUbeuXh1zOcX6PPbeR7ahu6rvEplVUHRuQ18yjxrvcF7RQwcKEClRuIFWHGcb8F5nOCtdBbsnW1JLJEqsO8YGH3xidbbil4"/>
+<!-- Map Pin Overlay -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<span class="material-symbols-outlined text-primary-container text-4xl drop-shadow-md pb-4 animate-bounce" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<!-- Auto-locate button -->
+<button aria-label="Use current location" class="absolute bottom-2 right-2 bg-white text-primary-container p-2 rounded-full shadow-md hover:bg-surface-container-lowest transition-colors active:scale-95" type="button">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">my_location</span>
+</button>
+</div>
+<!-- Location Text Input -->
+<div class="p-3 bg-surface-container-lowest flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant" style="font-variation-settings: 'FILL' 0;">pin_drop</span>
+<input class="w-full bg-transparent border-none p-0 font-body-sm text-body-sm text-on-surface focus:ring-0 placeholder:text-on-surface-variant/50" placeholder="Search address or adjust pin..." type="text"/>
+</div>
+</div>
+</div>
+</form>
+</main>
+<!-- Fixed Bottom CTA Bar for Mobile -->
+<div class="fixed bottom-0 left-0 w-full bg-surface/90 backdrop-blur-md border-t border-outline-variant/20 p-4 pb-safe z-50 shadow-[0_-4px_12px_rgba(0,33,71,0.05)]">
+<div class="max-w-2xl mx-auto flex gap-3">
+<button class="flex-1 bg-surface-container-lowest border border-primary-container text-primary-container font-label-md text-label-md py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-primary-container/5 transition-colors active:scale-[0.98]" type="button">
+                Save Draft
+            </button>
+<button class="flex-[2] bg-secondary-container text-on-secondary-container font-label-md text-label-md py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-secondary-container/90 transition-colors active:scale-[0.98] shadow-sm" form="issueForm" type="submit">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+                Submit Report
+            </button>
+</div>
+</div>
+<!-- Padding for safe area on mobile devices -->
+<style>
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom, 1rem); }
+    </style>
+<script>
+        // Simple script to handle visual feedback on form submission attempt
+        document.getElementById('issueForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const submitBtn = document.querySelector('button[type="submit"]');
+            const originalContent = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<span class="material-symbols-outlined animate-spin" style="font-variation-settings: \'FILL\' 0;">progress_activity</span> Processing...';
+            submitBtn.classList.add('opacity-80', 'cursor-not-allowed');
+            
+            // Simulate API call
+            setTimeout(() => {
+                submitBtn.innerHTML = '<span class="material-symbols-outlined" style="font-variation-settings: \'FILL\' 1;">check_circle</span> Submitted';
+                submitBtn.classList.remove('bg-secondary-container', 'text-on-secondary-container');
+                submitBtn.classList.add('bg-[#146c2e]', 'text-white'); // Success green
+                
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalContent;
+                    submitBtn.classList.remove('opacity-80', 'cursor-not-allowed', 'bg-[#146c2e]', 'text-white');
+                    submitBtn.classList.add('bg-secondary-container', 'text-on-secondary-container');
+                    this.reset(); // reset form
+                }, 2000);
+            }, 1500);
+        });
+    </script>
+</body></html>
