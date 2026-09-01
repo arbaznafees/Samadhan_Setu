@@ -218,3 +218,22 @@ class GovtAnalyticsResponse(BaseModel):
     domain_breakdown: List[DomainStat]
     district_breakdown: List[DistrictStat]
     recent_reports: List[ReportOut]
+
+
+# ==================== CHATBOT SCHEMAS ====================
+class ChatMessageIn(BaseModel):
+    role: str  # "user" or "model"
+    content: str
+
+class ChatRequest(BaseModel):
+    messages: List[ChatMessageIn]
+    portal: str = "citizen"  # citizen, hei, industry, govt
+
+class ChatAction(BaseModel):
+    type: str
+    data: Dict[str, Any] = {}
+
+class ChatResponse(BaseModel):
+    reply: str
+    actions: List[ChatAction] = []
+    is_simulated: bool = False

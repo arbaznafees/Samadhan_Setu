@@ -5,7 +5,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.config import settings
 from app.database import init_db
-from app.routers import auth, citizen, hei, industry, govt, media, notifications, health
+from app.routers import auth, citizen, hei, chatbot, industry, govt, media, notifications, health
 
 # Configure logging
 logging.basicConfig(
@@ -51,6 +51,7 @@ app.include_router(industry.router, prefix="/api")
 app.include_router(govt.router, prefix="/api")
 app.include_router(media.router, prefix="/api")
 app.include_router(notifications.router, prefix="/api")
+app.include_router(chatbot.router, prefix="/api")
 
 @app.get("/")
 def root():

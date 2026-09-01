@@ -2,6 +2,7 @@ import type { Viewport } from "next";
 import "@/styles/globals.css";
 import { AuthProvider } from "@/lib/auth-context";
 import { Navbar } from "@/components/Navbar";
+import { ChatWidget } from "@/components/ChatWidget";
 
 export const metadata = {
   title: "Samadhan Setu Jharkhand | Civic Grievance to Institutional Solution Platform",
@@ -48,7 +49,7 @@ export default function RootLayout({
               `,
             }}
           />
-          <footer className="bg-primary-container text-white py-8 border-t border-slate-800">
+                    <footer className="bg-primary-container text-white py-8 border-t border-slate-800">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
               <div className="flex items-center gap-2">
                 <div className="w-6 h-6 rounded bg-secondary-container text-slate-950 font-bold flex items-center justify-center text-xs">
@@ -65,6 +66,7 @@ export default function RootLayout({
               </div>
             </div>
           </footer>
+          <ChatWidget />
         </AuthProvider>
       </body>
     </html>

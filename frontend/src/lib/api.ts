@@ -114,7 +114,12 @@ export const api = {
       body: JSON.stringify(data),
     }),
   getAuditLogs: () => fetcher("/govt/audit-logs"),
-
+    // Chatbot
+  sendChatMessage: (data: { messages: { role: "user" | "model"; content: string }[]; portal: string }) =>
+    fetcher("/chatbot/message", {
+      method: "POST",
+      body: JSON.stringify(data),
+    }),
   // Notifications
   getNotifications: () => fetcher("/notifications"),
   markNotificationRead: (id: number) =>
